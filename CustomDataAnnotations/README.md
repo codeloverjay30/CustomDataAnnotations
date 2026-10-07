@@ -44,3 +44,7 @@ Custom Attribute for Data Annotations
 ### Added
 + Added more category
 
+## 3.0.0
+### Added
++ Add attribute for `TimeSpan` -- `PositiveTimeSpanAttribute`
+
