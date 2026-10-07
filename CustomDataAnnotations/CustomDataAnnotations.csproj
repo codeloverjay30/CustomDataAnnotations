@@ -4,4 +4,15 @@
     <Version>2.5.0</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+  <ItemGroup Condition="
+      '$(TargetFramework)' == 'netstandard2.1' Or
+      '$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.ComponentModel.Annotations" />
+  </ItemGroup>
+  <ItemGroup Condition="
+      '$(TargetFramework)' == 'net472' Or
+      '$(TargetFramework)' == 'net452' Or
+      '$(TargetFramework)' == 'net35'">
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
 </Project>
